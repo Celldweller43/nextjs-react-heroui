@@ -13,7 +13,7 @@ const Test = () => {
   const [userData, setUserData] = useState<UserType[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/userdata")
+    fetch("/api/userdata")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
