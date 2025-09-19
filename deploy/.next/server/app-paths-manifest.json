@@ -1,0 +1,16 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/analytics/page": "app/analytics/page.js",
+  "/api/userdata/route": "app/api/userdata/route.js",
+  "/faq/page": "app/faq/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/logout/page": "app/logout/page.js",
+  "/page": "app/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/project1/page": "app/project1/page.js",
+  "/project2/page": "app/project2/page.js",
+  "/project3/page": "app/project3/page.js",
+  "/settings/page": "app/settings/page.js",
+  "/test/[testId]/page": "app/test/[testId]/page.js",
+  "/test/page": "app/test/page.js"
+}

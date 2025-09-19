@@ -1,26 +1,83 @@
 @import "tailwindcss";
+@plugin '../hero.ts';
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --header-background: #ff8c00;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-dark-purple: #401651;
+  --color-light-white: rgba(255, 255, 255, 0.2);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="dark"] {
+  --background: #171717;
+  --foreground: #ffffff;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.menuHeading {
+  @apply inline-flex ml-0.5 w-[200px];
+}
+
+.menuLogo {
+  @apply bg-amber-300 text-4xl rounded-3xl p-1 cursor-pointer block float-left text-black;
+}
+
+.menuHeadingText {
+  @apply text-white origin-left font-medium text-2xl duration-75 ml-3;
+}
+
+.menuPanel {
+  @apply bg-dark-purple h-screen p-5 pt-8 duration-300 relative;
+}
+
+.menuToggler {
+  z-index: 999;
+  @apply bg-white text-dark-purple text-2xl rounded-full absolute -right-3 top-9.5 border border-dark-purple cursor-pointer;
+}
+
+.menuItem {
+  @apply text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-light-white rounded-md;
+}
+
+.menuItemIcon {
+  @apply text-2xl block float-left;
+}
+
+.menuItemTitle {
+  @apply flex-1 font-medium text-base;
+}
+
+.submenuItems {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 500ms ease-in-out;
+}
+
+.submenuItems.visible {
+  max-height: 500px; /* Large enough to show the whole list */
+}
+
+.submenuItem {
+  @apply text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 px-5 py-4 my-1 hover:bg-light-white rounded-md h-5;
+}
+
+button.mode {
+  background: gainsboro;
+  border: solid 1px #3f3f3f;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  margin: 4px;
+  padding: 2px 4px;
 }

@@ -1,0 +1,16 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/analytics/page": "/analytics",
+  "/api/userdata/route": "/api/userdata",
+  "/faq/page": "/faq",
+  "/favicon.ico/route": "/favicon.ico",
+  "/logout/page": "/logout",
+  "/page": "/",
+  "/profile/page": "/profile",
+  "/project1/page": "/project1",
+  "/project2/page": "/project2",
+  "/project3/page": "/project3",
+  "/settings/page": "/settings",
+  "/test/[testId]/page": "/test/[testId]",
+  "/test/page": "/test"
+}
